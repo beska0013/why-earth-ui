@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const  CopyPlugin   = require("copy-webpack-plugin");
 const path = require('path')
 
 
@@ -17,7 +18,11 @@ const config = {
         }),
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({ title: 'why-earth-ui', template: 'src/index.html'}),
-
+        new CopyPlugin({
+                patterns: [
+                    { from: 'src/assets', to: 'assets' }
+                ]
+            })
     ],
     mode: "none",
     entry:{
