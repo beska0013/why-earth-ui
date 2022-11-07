@@ -1,0 +1,126 @@
+@import './assets/scss/link';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  @include size(100vh,100vw)
+}
+
+
+main{
+  @include square(100%);
+  overflow: hidden;
+  position: relative;
+  background: $dark_blue-300;
+  background: -moz-radial-gradient(circle, rgba(3,24,29,1) 0%, rgba(0,29,46,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(3,24,29,1) 0%, rgba(0,29,46,1) 100%);
+  background: radial-gradient(circle, rgba(3,24,29,1) 0%, rgba(0,29,46,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03181d",endColorstr="#001d2e",GradientType=1);
+  z-index: 1;
+  &::after{
+    @include square(60vw);
+    @include min-square(740px);
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    translate: 50% -50%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 16, 58, 0.35) 0%, rgba(3, 80, 104, 0) 100%);
+    z-index: -1;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    @include square(50vw);
+    @include min-square(571px);
+    top:0;
+    left: 0;
+    translate: -50% -50%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 76, 131, 0.37) 0%, rgba(4, 98, 128, 0) 100%);
+    z-index: -1;
+  }
+  .grid-overlay{
+    @include square(100%);
+    position: absolute;
+    background-color: transparent;
+    opacity: 0.01;
+    background-image:  linear-gradient(#E0E0e0 1px, transparent 1px), linear-gradient(to right, #E0E0e0 1px, transparent 1px);
+    background-size: 12px 12px;
+    z-index: -1;
+  }
+  .hero-animation{
+  @include square(100%);
+  position: absolute;
+  }
+  //
+  //
+  //.hero{
+  //  @include flex(between);
+  //  height: 30vw;
+  //  max-height: 600px;
+  //
+  //  .hero_text{
+  //    @include flex(center);
+  //    @include size(100%, 50%);
+  //
+  //    .hero_text_content{
+  //      width: 73%;
+  //      position: relative;
+  //      h1{
+  //        font-size: 3vw;
+  //        font-weight: 600;
+  //        color: #FFFFFF;
+  //        font-family: 'Poppins', sans-serif;
+  //        margin-bottom: 1rem;
+  //      }
+  //      h2{
+  //        font-size: 1.5vw;
+  //        font-weight: 400;
+  //        color: #FFFFFF;
+  //        font-family: 'Poppins', sans-serif;
+  //      }
+  //      &::before{
+  //        content: '';
+  //        position: absolute;
+  //        @include square(50vw);
+  //        @include min-square(571px);
+  //        top:0;
+  //        left: 0;
+  //        translate: -50% -50%;
+  //        background: radial-gradient(50% 50% at 50% 50%, rgba(1, 76, 131, 0.37) 0%, rgba(4, 98, 128, 0) 100%);
+  //        z-index: -1;
+  //      }
+  //    }
+  //
+  //  }
+  //  .hero_img{
+  //    @include size(100%, 50%);
+  //    position: relative;
+  //    &::after{
+  //      @include square(60vw);
+  //      @include min-square(740px);
+  //      content: '';
+  //      position: absolute;
+  //      top:0;
+  //      right: 0;
+  //      translate: 50% -50%;
+  //      background: radial-gradient(50% 50% at 50% 50%, rgba(0, 16, 58, 0.35) 0%, rgba(3, 80, 104, 0) 100%);
+  //      z-index: -1;
+  //    }
+  //  }
+  //
+  //}
+  //.survey-content{
+  //  @include flex(center);
+  //  width: 50%;
+  //  app-landing-survey-ui{
+  //    width: 73%;
+  //  }
+  //}
+
+
+}
