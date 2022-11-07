@@ -26,7 +26,7 @@ let model = new Mesh();
 
     renderer.setSize( window.innerWidth, window.innerHeight );
     animation.appendChild( renderer.domElement );
-    loader.load( '../src/assets/images/gltf/brain-simple-mesh1.glb',
+    loader.load( './assets/images/gltf/brain-simple-mesh1.glb',
         ( gltf ) => model.add(gltf.scene ),
         undefined,  ( error ) =>  console.error( error )
     )
